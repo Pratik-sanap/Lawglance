@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LawGlance — AI Legal Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3v18M6 7l-3.5 7a3.5 3.5 0 0 0 7 0L6 7Zm12 0l-3.5 7a3.5 3.5 0 0 0 7 0L18 7ZM3 21h18M4 7h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>LawGlance</strong>
+        <small>AI Legal Assistant</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#home" class="is-active">Home</a>
+      <a href="#research">Research</a>
+      <a href="#browse">Browse</a>
+      <a href="#agreement-intelligence">Agreement Intelligence</a>
+      <a href="#for-lawyers">Register as Lawyer</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-ghost btn-sm" type="button">Sign in</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">An agentic assistant for legal research</p>
+        <h1>Legal answers,<br>grounded in law.</h1>
+        <p class="lede">
+          Ask the assistant a question in plain language, search the case-law and statute
+          corpus yourself, or upload a contract and see it reviewed clause by clause against
+          Indian law. Every answer points back at the judgment or provision it came from, so
+          you can check it rather than take our word for it.
+        </p>
+
+        <dl class="coverage-line">
+          <div><dt>Searchable now</dt><dd>Indian Supreme Court judgments and central Acts</dd></div>
+          <div><dt>In preparation</dt><dd>United States and Canada</dd></div>
+        </dl>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" type="button" data-action="ask-assistant">Ask the assistant</button>
+          <button class="btn btn-outline" type="button" data-action="open-research">Search case law</button>
+          <button class="btn btn-outline" type="button" data-action="open-agreement-intelligence">Analyse an agreement</button>
+        </div>
+
+        <p class="fine-print">
+          Legal information, not legal advice — verify anything you act on, and talk to a
+          qualified lawyer for your own situation.
+        </p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 320 320" width="100%" height="100%">
+          <circle cx="130" cy="150" r="118" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <circle cx="210" cy="170" r="86" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+          <path d="M160 70v150M120 100l-28 55a22 22 0 0 0 44 0l-16-55ZM200 100l-28 55a22 22 0 0 0 44 0l-16-55ZM100 230h120"
+                stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GET STARTED ============ -->
+  <section class="section" id="get-started">
+    <div class="wrap">
+      <p class="eyebrow">Get started</p>
+      <h2>Choose how you want to work with the law</h2>
+
+      <div class="card-grid card-grid-4">
+        <article class="option-card">
+          <span class="option-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Ask the AI assistant</h3>
+          <p>Plain-language answers grounded in Indian law, with sources.</p>
+          <a href="#ask" class="card-link" data-action="ask-assistant">Start a chat</a>
+        </article>
+
+        <article class="option-card">
+          <span class="option-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.4"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Search judgments &amp; Acts</h3>
+          <p>Supreme Court judgments and central Acts, with cited AI answers.</p>
+          <a href="#research" class="card-link" data-action="open-research">Open research</a>
+        </article>
+
+        <article class="option-card">
+          <span class="option-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 19.5V5.6c0-.9.7-1.6 1.6-1.6H9a3 3 0 0 1 3 3v14M20 19.5V5.6c0-.9-.7-1.6-1.6-1.6H15a3 3 0 0 0-3 3v14M4 19.5h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Browse the corpus</h3>
+          <p>See exactly what is indexed, year by year.</p>
+          <a href="#browse" class="card-link" data-action="browse-corpus">Browse</a>
+        </article>
+
+        <article class="option-card">
+          <span class="option-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M14 2v6h6M9 13h6M9 17h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </span>
+          <span class="badge">New</span>
+          <h3>Agreement Intelligence</h3>
+          <p>Clause-by-clause review of a PDF against Indian law. Free account required.</p>
+          <a href="#agreement-intelligence" class="card-link" data-action="open-agreement-intelligence">Upload a contract</a>
+        </article>
+      </div>
+
+      <ol class="step-list">
+        <li>
+          <span class="step-index">01</span>
+          <h4>Ask in plain language</h4>
+          <p>No legalese required — describe the situation as you would to a person.</p>
+        </li>
+        <li>
+          <span class="step-index">02</span>
+          <h4>Get grounded answers</h4>
+          <p>An agentic retrieval loop reads the statute or judgment before it answers.</p>
+        </li>
+        <li>
+          <span class="step-index">03</span>
+          <h4>Go deeper yourself</h4>
+          <p>Open the research view to read the judgment or provision in full.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH ENGINE ============ -->
+  <section class="section section-alt" id="research">
+    <div class="wrap">
+      <p class="eyebrow">The research engine</p>
+      <h2>Search the law yourself</h2>
+      <p class="section-lede">
+        The assistant answers in conversation. When you need the primary source, the research
+        view puts the corpus in front of you — full judgments, statute provisions, and an AI
+        answer that cites every claim back to the document it came from.
+      </p>
+
+      <dl class="stat-row">
+        <div><dt>5,168</dt><dd>Judgments indexed</dd></div>
+        <div><dt>9</dt><dd>Central Acts</dd></div>
+        <div><dt>4,807</dt><dd>With AI summaries</dd></div>
+        <div><dt>India</dt><dd>Jurisdiction</dd></div>
+      </dl>
+      <p class="fine-print">
+        Coverage: Supreme Court of India — 2017, 2021–2026. Browse the catalog to see exactly
+        what is in there before you trust an empty result.
+      </p>
+
+      <div class="card-grid card-grid-3 feature-grid">
+        <div class="feature">
+          <h4>Four-leg hybrid search</h4>
+          <p>Exact citation matching, provision lookup, semantic search and a keyword backstop
+            are fused together — so "2017 INSC 801", "Article 21" and "can police search my
+            phone" all land somewhere sensible.</p>
+        </div>
+        <div class="feature">
+          <h4>Answers that cite</h4>
+          <p>Every sentence in a generated answer carries a marker back to the judgment or
+            provision behind it, listed underneath. If it cannot cite, it does not claim.</p>
+        </div>
+        <div class="feature">
+          <h4>Read the source</h4>
+          <p>Open any result for the bench, the issues, the holding and the outcome — or the
+            full text of the judgment, unedited.</p>
+        </div>
+      </div>
+
+      <div class="try-block">
+        <p class="label">Try one of these</p>
+        <div class="chip-row">
+          <button class="chip" type="button">fundamental rights Article 21</button>
+          <button class="chip" type="button">punishment for cyber fraud IT Act</button>
+          <button class="chip" type="button">is privacy a fundamental right</button>
+          <button class="chip" type="button">2017 INSC 801</button>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" type="button" data-action="open-research">Open research</button>
+        <button class="btn btn-outline" type="button" id="browse" data-action="browse-corpus">Browse the catalog</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AGREEMENT INTELLIGENCE ============ -->
+  <section class="section" id="agreement-intelligence">
+    <div class="wrap">
+      <p class="eyebrow">New · Agreement Intelligence</p>
+      <h2>Read a contract before you sign it</h2>
+      <p class="section-lede">
+        Upload a contract as a PDF and name the two sides. LawGlance marks every sentence by
+        which party it favours, flags clauses that may conflict with Indian law, and lists the
+        standard clauses the document is missing — with the document and the findings side by
+        side.
+      </p>
+
+      <div class="card-grid card-grid-3 feature-grid">
+        <div class="feature">
+          <h4>Favourability heatmap</h4>
+          <p>Each sentence is scored on a five-step scale from one party to the other. Switch
+            which side you are reviewing, and the colours follow — no second review.</p>
+        </div>
+        <div class="feature">
+          <h4>Issues, explained from the statute</h4>
+          <p>A flagged clause is explained from the governing Act — the Indian Contract Act,
+            the Digital Personal Data Protection Act and others — quoting the section it relies
+            on. If that Act is not in the corpus yet, the card says so instead of guessing.</p>
+        </div>
+        <div class="feature">
+          <h4>Missing-clause checklist</h4>
+          <p>Termination, liability caps, indemnity, confidentiality, dispute resolution,
+            governing law and more: what the contract covers, and what it leaves out.</p>
+        </div>
+      </div>
+
+      <div class="try-block">
+        <p class="label">What it flags</p>
+        <div class="chip-row chip-row-static">
+          <span class="chip chip-static">Restraint of trade</span>
+          <span class="chip chip-static">Restrictions on legal proceedings</span>
+          <span class="chip chip-static">Penalty or fixed damages</span>
+          <span class="chip chip-static">One-sided arbitrator appointment</span>
+          <span class="chip chip-static">Personal data processing</span>
+          <span class="chip chip-static">Foreign law or forum</span>
+        </div>
+      </div>
+
+      <p class="fine-print">
+        Free with an account. PDFs with a text layer, up to 30 pages; uploaded contracts are
+        deleted automatically after 24 hours. A clause that could not be checked is shown as
+        unchecked, never clean. This is legal information, not legal advice — have a lawyer
+        review anything you are about to sign.
+      </p>
+
+      <button class="btn btn-primary" type="button" data-action="open-agreement-intelligence">Open Agreement Intelligence</button>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section section-alt" id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Empowering justice through AI</p>
+        <h2>About LawGlance</h2>
+        <h3 class="sub">An AI legal assistant</h3>
+        <p>
+          LawGlance makes primary legal material — statutes and judgments — readable by anyone
+          approaching a question, whether as a layperson or as a practitioner. An agentic
+          workflow built on retrieval-augmented generation reads the governing provision or
+          judgment before it answers, and cites what it read.
+        </p>
+        <p>
+          The assistant at the heart of LawGlance is free and open source, developed in public
+          on GitHub by its own community. This site is a separate build on that foundation — a
+          hosted deployment with its own agentic workflow, multi-jurisdiction research corpus
+          and retrieval engine. The two are related projects, not the same codebase.
+        </p>
+        <p>
+          To begin, select <strong>Ask the assistant</strong> and type your question. LawGlance
+          replies with the relevant law and shows you where it came from.
+        </p>
+      </div>
+
+      <aside class="mission-card">
+        <p class="label">Our mission</p>
+        <blockquote>
+          "Justice should be accessible to everyone. LawGlance ensures that no one is left
+          behind when it comes to legal knowledge."
+        </blockquote>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <div class="divider"></div>
+      <h3>What the assistant covers</h3>
+      <p class="section-lede">
+        The conversational assistant answers from the statutes listed below. The research view
+        above draws on a separate and considerably larger corpus of full judgments; the two are
+        indexed independently.
+      </p>
+      <div class="chip-row chip-row-static coverage-chips">
+        <span class="chip chip-static">The Indian Constitution</span>
+        <span class="chip chip-static">Bharatiya Nyaya Sanhita, 2023</span>
+        <span class="chip chip-static">Bharatiya Nagarik Suraksha Sanhita, 2023</span>
+        <span class="chip chip-static">Bharatiya Sakshya Adhiniyam, 2023</span>
+        <span class="chip chip-static">Consumer Protection Act, 2019</span>
+        <span class="chip chip-static">Motor Vehicles Act, 1988</span>
+        <span class="chip chip-static">Information Technology Act, 2000</span>
+        <span class="chip chip-static">Sexual Harassment of Women at Workplace Act, 2013</span>
+        <span class="chip chip-static">Protection of Children from Sexual Offences Act, 2012</span>
+        <span class="chip chip-static">Right to Information Act, 2005</span>
+        <span class="chip chip-static">Right to Education Act, 2009</span>
+        <span class="chip chip-static">Goods and Services Tax Act, 2017</span>
+        <span class="chip chip-static">Companies Act, 2013</span>
+        <span class="chip chip-static">Insolvency and Bankruptcy Code, 2016</span>
+      </div>
+      <p class="fine-print">
+        Originally released as Niyam SahaAI. Coverage of further legal systems is in progress —
+        see the roadmap below.
+      </p>
+    </div>
+
+    <div class="wrap">
+      <div class="divider"></div>
+      <h3>Coming soon: United States and Canadian law</h3>
+      <p class="section-lede">
+        Indian law is where LawGlance begins, not where it ends. The US and Canadian corpora are
+        built and being readied for release; everything below that is planned work rather than
+        current coverage.
+      </p>
+
+      <div class="card-grid card-grid-3 roadmap-grid">
+        <article class="roadmap-card">
+          <h4>United States <span class="tag">In preparation</span></h4>
+          <p>The US Supreme Court corpus and federal statutes are already built and indexed
+            internally; they are being checked before release. Expect US case-law search on
+            LawGlance next.</p>
+        </article>
+        <article class="roadmap-card">
+          <h4>Canada <span class="tag">In preparation</span></h4>
+          <p>Supreme Court of Canada judgments and federal Acts are being prepared for release,
+            sourced directly so they can be published under terms that allow open use.</p>
+        </article>
+        <article class="roadmap-card">
+          <h4>Europe <span class="tag tag-muted">Exploratory</span></h4>
+          <p>EU directives and GDPR, and civil-law systems more generally. No work started yet.</p>
+        </article>
+        <article class="roadmap-card">
+          <h4>Asia-Pacific <span class="tag tag-muted">Exploratory</span></h4>
+          <p>Common-law systems, commercial law and regional trade agreements. No work started
+            yet.</p>
+        </article>
+        <article class="roadmap-card">
+          <h4>Specialist areas <span class="tag tag-muted">Exploratory</span></h4>
+          <p>Corporate law, intellectual property, international arbitration and maritime law.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="divider"></div>
+      <div class="two-col">
+        <div>
+          <h4>Our vision for the future</h4>
+          <p>The objective is to close the distance between the public and the law: establishing
+            what a provision actually says should be no harder than asking a question.
+            Multilingual support, voice input and additional jurisdictions are the direction of
+            travel. None of it replaces a lawyer — the intent is to help people reach one better
+            informed.</p>
+        </div>
+        <div>
+          <h4>How LawGlance works</h4>
+          <p>Questions are answered by an agentic retrieval workflow rather than by a model
+            working from memory. The system plans a search across the indexed statutes and
+            judgments, retrieves the passages that actually govern the question using combined
+            keyword and semantic retrieval, and composes an answer constrained to what it
+            retrieved — with a citation for each point, so any statement can be traced back to
+            the provision or judgment behind it.</p>
+        </div>
+      </div>
+      <div class="two-col">
+        <div>
+          <h4>What it is useful for</h4>
+          <p>Legal research has generally meant either a paid subscription database or reading
+            the statute unaided. LawGlance is free to use, requires no account, and cites its
+            sources so its output can be verified. It is built for orientation — establishing
+            what a provision says and which judgments bear on it — rather than for resolving a
+            dispute.</p>
+        </div>
+        <div>
+          <h4>The project and this site</h4>
+          <p>Now in its third year, LawGlance is built by a small team working across AI, data
+            science and law, with guidance from mentors in both fields. It began as Niyam
+            SahaAI, and its assistant is developed in the open on GitHub — free software anyone
+            may run, inspect or build on. This site is a separate build on that work, with its
+            own agentic workflow, research corpus and retrieval engine. It remains an evolving
+            system rather than a finished product, and its gaps are documented rather than
+            concealed.</p>
+        </div>
+      </div>
+      <p class="fine-print">
+        LawGlance is an independent initiative, built and maintained by its contributors in
+        their own time. It is not affiliated with, sponsored by or endorsed by any organisation
+        its contributors are employed by, and nothing here represents the position of any such
+        organisation.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FOR LAWYERS ============ -->
+  <section class="section" id="for-lawyers">
+    <div class="wrap">
+      <p class="eyebrow">For legal professionals</p>
+      <h2>Join the future of legal knowledge</h2>
+      <p class="section-lede">
+        This is a place for legal education and for connecting with professional lawyers.
+        Register to reach people actively looking for help in your practice area.
+      </p>
+      <button class="btn btn-primary" type="button" data-action="register-lawyer">Register as Lawyer</button>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <strong>LawGlance</strong>
+      <p>Making legal knowledge accessible to everyone through AI-powered assistance.</p>
+    </div>
+
+    <div class="footer-col">
+      <p class="label">Product</p>
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#browse">Browse</a>
+      <a href="#for-lawyers">Register as Lawyer</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="label">Legal coverage</p>
+      <a href="#about">Indian Constitution</a>
+      <a href="#about">Bharatiya Nyaya Sanhita</a>
+      <a href="#about">Consumer Protection Act</a>
+      <a href="#about">IT Act, 2000</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="label">Connect</p>
+      <a href="https://github.com/Pratik-sanap/Lawglance.git" target="_blank" rel="noopener">GitHub project</a>
+      <a href="mailto:sanappratik99@gmail.com">sanappratik99@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <div class="footer-meta">
+      <span>© 2026 LawGlance. All rights reserved.</span>
+      <span class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Legal Disclaimer</a>
+      </span>
+    </div>
+
+    <p class="fine-print"><strong>Legal disclaimer:</strong> LawGlance is an AI-powered legal
+      assistant designed to provide general legal information. It does not constitute legal
+      advice and should not be relied upon as such. For specific legal matters, please consult
+      with a qualified attorney.</p>
+    <p class="fine-print"><strong>Independence:</strong> LawGlance is an independent initiative,
+      built and maintained by its contributors in their own time. It is not affiliated with,
+      sponsored by or endorsed by any organisation its contributors are employed by, and nothing
+      on this site represents the position of any such organisation.</p>
+    <p class="fine-print"><strong>Data sources:</strong> Supreme Court of India judgments are
+      from the Indian Supreme Court Judgments dataset via AWS Open Data, licensed under CC BY
+      4.0. Central Acts are from India Code, Government of India.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
